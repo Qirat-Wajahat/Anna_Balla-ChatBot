@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}Chat{% endblock title %}
+
+{% block body %}
+    <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+        <div class="container mx-auto px-3 px-md-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 p-4 p-md-5 rounded text-center">
+                    <p class="mt-4" style="color: rgb(227, 227, 227); line-height: 1.6; font-size: 1.1rem; text-align: justify;">
+                        <img class="mx-3" src="{% static 'img/logo2.png' %}" alt="Logo" width="30" height="30">
+                        {{ content|safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if open_url %}
+    <script>
+        // Open the URL in a new tab/window once the page loads
+        window.onload = function() {
+            window.open("{{ open_url }}", "_blank");
+        }
+    </script>
+    {% endif %}
+{% endblock body %}
