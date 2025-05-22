@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django migration files (optional: only if you want to reset them often)
+# */migrations/*.py
+# */migrations/*.pyc
+
+# Django cache, local databases
+*.sqlite3
+*.db
+
+# Environment variables and settings
+.env
+*.env
+
+# VS Code & IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.python-version
+
+# Static and media (if collected/generated)
+staticfiles/
+static/
+media/
+
+# Logs
+*.log
+
+# Pytest / Coverage
+htmlcov/
+.coverage
+.tox/
+.pytest_cache/
+
+# pip dependency files
+pip-wheel-metadata/
+
+# Docker / Defang-specific
+*.defang.dev
+*.dockerfile
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Node files (if you’re using npm or React with Django)
+node_modules/
