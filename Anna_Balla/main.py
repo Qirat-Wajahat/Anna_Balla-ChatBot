@@ -1,10 +1,15 @@
-import webbrowser as wb
-import datetime as dt
+# It's a chatbot that can open websites, calculate simple math, and answer basic questions.
+# https://qirat-wajahat-web--8000.prod1b.defang.dev
 
-# Define chatbot responses
+import datetime as dt 
+import pytz
+
 def get_time():
-    current_time = dt.datetime.now().strftime("%I:%M:%S %p")
+    # Replace 'Asia/Karachi' with your timezone
+    local_timezone = pytz.timezone("Asia/Karachi")
+    current_time = dt.datetime.now(local_timezone).strftime("%I:%M:%S %p")
     return f"The current time is {current_time}."
+
 
 def open_website(query):
     websites = {

@@ -1,0 +1,20 @@
+services:
+  web:
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    build: .
+    ports:
+      - mode: ingress
+        target: 8000
+        published: 8000
+
+  database:
+    image: postgres:latest
+    x-defang-postgres: true
+    ports:
+      - mode: host
+        target: 5432
+        published: 5432
